@@ -21,8 +21,9 @@
 # escpecially if they contain "#" chars...
 # Remember to edit /etc/mysql/debian.cnf when changing the socket location.
 [client]
-port            = <%= node['mysql']['port'] %>
-socket          = <%= node['mysql']['socket'] %>
+port                  = <%= node['mysql']['port'] %>
+socket                = <%= node['mysql']['socket'] %>
+default-character-set = <%= node['mysql']['tunable']['character-set-client'] %>
 
 # Here is entries for some specific programs
 # The following values assume you have at least 32M ram

@@ -50,3 +50,4 @@ else
   default['mysql']['client']['packages'] = %w{mysql-client libmysqlclient-dev}
 end
 
+default['mysql']['tunable']['character-set-client'] = "utf8"
